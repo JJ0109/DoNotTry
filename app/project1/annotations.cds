@@ -1,0 +1,1 @@
+using myservice as service from '../../srv/myservice';

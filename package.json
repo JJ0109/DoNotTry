@@ -1,0 +1,42 @@
+{
+  "name": "meineapp",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.84.7",
+    "sqlite3": "5.0.0"
+  },
+  "scripts": {
+    "start": "cds run"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "model": "*",
+        "credentials": {
+          "database": "sqlite.db"
+        }
+      }
+    }
+  },
+  "sapux": [
+    "app/project1",
+    "app/project1",
+    "app/project1",
+    "app/project1",
+    "app/kannwiedergeloeschtwerden",
+    "app/adieu",
+    "app/wiederraus",
+    "app/demopatient",
+    "app/project3",
+    "app/project4"
+  ]
+}

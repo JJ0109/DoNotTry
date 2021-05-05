@@ -1,0 +1,84 @@
+<mvc:View 
+    xmlns="sap.m" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:semantic="sap.f.semantic" 
+    xmlns:form="sap.ui.layout.form" 
+    controllerName="project1.controller.Object">
+
+	<semantic:SemanticPage
+        id="page" 
+        headerPinnable="false" 
+        toggleHeaderOnTitleClick="false"
+        busy="{objectView>/busy}"
+        busyIndicatorDelay="{objectView>/delay}">
+
+		<semantic:titleHeading>
+			<Title text="{anrede} {vorname} {nachname}"/>
+		</semantic:titleHeading>
+
+        <semantic:headerContent>
+			<FlexBox
+				alignItems="Start"
+				justifyContent="SpaceBetween">
+				<Panel backgroundDesign="Transparent">
+					<ObjectAttribute
+						title="Patientennummer"
+						text="{patientennummer}"/>
+					<ObjectAttribute
+						title="Versicherungsnummer"
+						text="{versicherungsnummer}"/>
+                    <ObjectAttribute
+						title="Usernummer"
+						text="{usernummer}"/>
+				</Panel>
+			</FlexBox>
+		</semantic:headerContent>
+
+ 	<semantic:content>
+    <Panel class="sapUiContentPadding" headerText="Kontaktdaten">
+             <content>
+                <form:SimpleForm 
+                        minWidth="1024" 
+                        maxContainerCols="2" 
+                        editable="false" 
+                        layout="ResponsiveGridLayout" 
+                        labelSpanL="3" 
+                        labelSpanM="3" 
+                        emptySpanL="4" 
+                        emptySpanM="4" 
+                        columnsL="1" 
+                        columnsM="1">
+                  <form:content>
+                     <Label text="{i18n>lv_strasse}"/>
+                     <Text text="{strasse}"/>
+                     <Label text="{i18n>lv_hausnummer}"/>
+                     <Text text="{hausnummer}"/>
+                     <Label text="{i18n>lv_zusatz}"/>
+                     <Text text="{zusatz}"/>    
+                     <Label text="{i18n>lv_postfach}"/>
+                     <Text text="{postfach}"/>                                          
+                     <Label text="{i18n>lv_postleitzahl}"/>
+                     <Text text="{postleitzahl}"/>
+                     <Label text="{i18n>lv_ort}"/>
+                     <Text text="{ort}"/>    
+                     <Label text="{i18n>lv_land}"/>
+                     <Text text="{land}"/>                               
+                     <Label text="{i18n>lv_telefonnummer}"/>
+                     <Text text="{telefonnummer}"/>
+                     <Label text="{i18n>lv_handynummer}"/>
+                     <Text text="{handynummer}"/>                     
+                     <Label text="{i18n>lv_email}"/>
+                     <Text text="{email}"/>
+                     <Label text="{i18n>lv_fax}"/>
+                     <Text text="{fax}"/>                     
+                  </form:content>
+               </form:SimpleForm>
+             </content>
+        </Panel> 
+		</semantic:content>
+	
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+		</semantic:sendEmailAction>
+	</semantic:SemanticPage>
+</mvc:View>

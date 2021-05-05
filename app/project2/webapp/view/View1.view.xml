@@ -1,0 +1,103 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+controllerName="project2.controller.View1" 
+displayBlock="true">
+
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+            <Page id="page" title="Schlaftagebuch">
+					<content>
+					    <Label text="1. Wann sind Sie zu Bett gegangen?" width="70%" id="label0"/><TimePicker xmlns="sap.m" id="picker0" displayFormat="HH:mm"/>
+					    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="2. Wann sind Sie eingeschlafen?" width="70%" id="label0_copy"/>
+					    <TimePicker xmlns="sap.m" id="picker1" displayFormat="HH:mm"/>
+					    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="3. Wann sind Sie aufgewacht?" width="70%" id="label0_copy2"/>
+					    <TimePicker xmlns="sap.m" id="picker2" displayFormat="HH:mm"/>
+					    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="4. Wann sind Sie aufgestanden?" width="70%" id="label0_copy3"/>
+					    <TimePicker xmlns="sap.m" id="picker3" displayFormat="HH:mm"/>
+					    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="5. Wie haben Sie geschlafen?" width="100%" id="label0_copy4"/>
+					    <RadioButtonGroup xmlns="sap.m" columns="1" id="group0">
+					        <buttons>
+					            <RadioButton id="button1" text="gar nicht"/>
+					            <RadioButton id="button0" text="gut"/>
+					            <RadioButton id="button2" text="unruhig"/>
+                                <RadioButton id="button3" text="schlecht"/>
+					        </buttons>
+					    </RadioButtonGroup>
+					    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="6. Sind Sie häufig wach geworden?, Wenn ja, wie oft?" width="100%" id="label0_copy5"/>
+					    <RadioButtonGroup xmlns="sap.m" columns="1" id="group1">
+					        <buttons><RadioButton text="Ja, ca. " id="button4"/>
+					            <RadioButton text="Nein" id="button5"/>
+					        </buttons>
+					    </RadioButtonGroup>
+					    <Input xmlns="sap.m" value="10" id="input0" width="8%"/>
+					
+                      <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="7. Haben Sie länger als 30 Min. gebraucht, um wieder einzuschlafen?" width="100%" id="label5_copy5"/>
+                    	<RadioButtonGroup xmlns="sap.m" columns="1" id="group2">
+					        <buttons>
+					            <RadioButton text="Ja" id="button6"/>
+					            <RadioButton text="Nein" id="button7"/>
+					        </buttons>
+					    </RadioButtonGroup>
+
+                     <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="8. Haben Sie schlaffördernde Medikamente eingenommen? " width="100%" id="label1"/>
+                    	<RadioButtonGroup xmlns="sap.m" columns="1" id="group3">
+					        <buttons>
+					            <RadioButton text="Ja" id="button8"/>
+					            <RadioButton text="Nein" id="button9"/>
+					        </buttons>
+					    </RadioButtonGroup>
+                    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="9. Wenn ja, welche? " width="100%" id="label12"/>
+                    <Input xmlns="sap.m" value="Medikament 1" id="input1" width="100%"/>
+                    <Input xmlns="sap.m" value="Medikament 2" id="input2" width="100%"/>
+                    <Input xmlns="sap.m" value="Medikament 3" id="input3" width="100%"/>
+                    <Input xmlns="sap.m" value="Medikament 4" id="input4" width="100%"/>
+                    <Input xmlns="sap.m" value="Medikament 5" id="input5" width="100%"/>
+                    
+                    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="10. Haben Sie Alkohol getrunken? " width="100%" id="label123"/>
+                	<RadioButtonGroup xmlns="sap.m" columns="1" id="group4">
+					        <buttons>
+					            <RadioButton text="Ja" id="button10"/>
+					            <RadioButton text="Nein" id="button11"/>
+					        </buttons>
+					    </RadioButtonGroup>
+                    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="11. Welche Sorte und in welcher Menge (in Milliliter)? " width="100%" id="label1234"/>
+                    <Input xmlns="sap.m" value="Sorte 1" id="input6" width="50%"/>
+                         <Input xmlns="sap.m" value="Menge" id="input11" width="10%"/>
+                    <Input xmlns="sap.m" value="Sorte 2" id="input7" width="50%"/>
+                        <Input xmlns="sap.m" value="Menge" id="input12" width="10%"/>
+                    <Input xmlns="sap.m" value="Sorte 3" id="input8" width="50%"/>
+                        <Input xmlns="sap.m" value="Menge" id="input13" width="10%"/>
+                    <Input xmlns="sap.m" value="Sorte 4" id="input9" width="50%"/>
+                        <Input xmlns="sap.m" value="Menge" id="input14" width="10%"/>
+                    <Input xmlns="sap.m" value="Sorte 5" id="input10" width="50%"/>
+                         <Input xmlns="sap.m" value="Menge " id="input15" width="10%"/>
+                    
+                    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="12. War die Nacht eine... " width="100%" id="label12345"/>
+					    <RadioButtonGroup xmlns="sap.m" columns="1" id="group5">
+					        <buttons>
+                                 <RadioButton id="button13" text="untypisch schlechte"/>
+                                <RadioButton id="button12" text="untypisch gute"/>
+					        </buttons>
+					    </RadioButtonGroup>    
+
+                    <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="13. Bevorzugen Sie zum Schlafen eine bestimmte Körperlage? " width="100%" id="label123456"/>
+					    <RadioButtonGroup xmlns="sap.m" columns="1" id="group6">
+					        <buttons>
+					            <RadioButton id="button14" text="Rücken"/>
+					            <RadioButton id="button15" text="Seite"/>
+					            <RadioButton id="button16" text="Bauch"/>
+					        </buttons>
+					    </RadioButtonGroup>
+                     <Label xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="14. Gibt es zusätzliche Anmerkungen/Besonderheiten? Welche? " width="100%" id="label1234567"/>    
+                     <Input xmlns="sap.m" value=" " id="input16" width="100%"/>
+                    </content>
+				<headerContent>
+				    <Text xmlns="sap.m" text="Sie haben noch 14:30 Stunden Zeit" id="text0"/>
+				</headerContent>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

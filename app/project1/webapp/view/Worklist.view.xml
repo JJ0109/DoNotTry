@@ -1,0 +1,94 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" controllerName="project1.controller.Worklist">
+
+ 
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" >
+
+		<semantic:titleHeading>
+			<Title text="{i18n>worklistTitle}"/>
+		</semantic:titleHeading>
+
+	<semantic:headerContent>
+
+	<Table id="table" width="auto" 
+            items="{ path: '/MeineappSet',                       
+            sorter: {                            
+                path: 'patientennummer',                         
+                descending: false             }     }" 
+            noDataText="{worklistView>/tableNoDataText}"
+            growing="true" 
+            growingScrollToLoad="true" 
+            updateFinished=".onUpdateFinished" 
+            mode="MultiSelect">
+
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						<ToolbarSpacer/>
+						<ToolbarSpacer xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" xmlns="sap.m" id="spacer3"/>
+						<SearchField id="searchField" tooltip="{i18n>worklistSearchTooltip}" search=".onSearch" width="auto">
+						</SearchField>
+                        <Button
+											id="addUserButton"
+											icon="sap-icon://add"
+											tooltip="{i18n>createButtonText}"
+											press=".onCreate">
+											<layoutData>
+												<OverflowToolbarLayoutData priority="NeverOverflow"/>
+											</layoutData>
+						</Button>                      
+                        <Button
+											id="deleteUserButton"
+											icon="sap-icon://delete"
+											tooltip="{i18n>deleteButtonText}"
+											press=".onDelete">
+											<layoutData>
+												<OverflowToolbarLayoutData priority="NeverOverflow"/>
+											</layoutData>
+						</Button>
+					</Toolbar>
+				</headerToolbar>
+
+				<columns>
+					<Column id="nameColumn">
+						<Text text="{i18n>tableNameColumnTitle}" id="Patientennummer"/>
+					</Column>
+        			<Column id="nameColumn1">
+						<Text text="{i18n>tableNameColumnTitle1}" id="Anrede"/>
+					</Column>
+                    <Column id="nameColumn2">
+						<Text text="{i18n>tableNameColumnTitle2}" id="Vorname"/>
+					</Column>
+        			<Column id="nameColumn3">
+						<Text text="{i18n>tableNameColumnTitle3}" id="Nachname"/>
+					</Column>	
+        			<Column id="nameColumn4">
+						<Text text="{i18n>tableNameColumnTitle4}" id="Geburtsdatum"/>
+					</Column>
+                    <Column id="nameColumn5">
+						<Text text="{i18n>tableNameColumnTitle5}" id="Geschlecht"/>
+					</Column>
+				</columns>
+
+				<items>
+					<ColumnListItem type="Navigation" press=".onPress">
+						<cells>
+							<ObjectIdentifier title="{patientennummer}"/>
+							<ObjectIdentifier xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" xmlns="sap.m" title="{anrede}" id="identifier1"/>
+							<ObjectIdentifier xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" xmlns="sap.m" title="{vorname}" id="identifier2"/>
+							<ObjectIdentifier xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" xmlns="sap.m" title="{nachname}" id="identifier3"/>
+							<ObjectIdentifier xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" xmlns="sap.m" title="{geburtsdatum}" id="identifier4"/>
+                            <ObjectIdentifier xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic" xmlns="sap.m" title="{geschlecht}" id="identifier5"/>
+                    	</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+
+		</semantic:headerContent>
+          
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+		</semantic:sendEmailAction>
+	        
+	</semantic:SemanticPage>
+
+</mvc:View>
